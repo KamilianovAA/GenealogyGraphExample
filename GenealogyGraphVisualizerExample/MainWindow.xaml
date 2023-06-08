@@ -1,0 +1,20 @@
+﻿<Window x:Class="GenealogyGraphVisualizerExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenealogyGraphVisualizerExample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Row="0" x:Name="NameListBox" SelectionChanged="NameListBox_SelectionChanged">
+            <TextBlock FontWeight="Bold" Text="Ф.И.О."/>
+        </ListBox>
+        <Button Content="Показать больше" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"
+                Width="auto" Height="auto" MinWidth="80px" MinHeight="20px" FontSize="16px" Click="Button_Click"/>     
+    </Grid>
+</Window>

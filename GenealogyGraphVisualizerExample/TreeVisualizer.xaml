@@ -1,0 +1,42 @@
+﻿<Window x:Class="GenealogyGraphVisualizerExample.TreeVisualizer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenealogyGraphVisualizerExample"
+        mc:Ignorable="d"
+        Title="TreeVisualizer" Height="450" Width="800">
+    <Grid x:Name="VisualizationGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="ControlGrid" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <CheckBox x:Name="ShowNinetySevenCheck" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Center" Padding="5px"
+                Width="auto" Height="auto" MinWidth="80px" MinHeight="20px" FontSize="12px" IsChecked="True" Click="ShowNinetySevenCheck_Click">
+                <TextBlock>
+                    Показать связи<LineBreak/>"Другая степень родства"
+                </TextBlock>
+            </CheckBox>
+            <CheckBox x:Name="OnlyToRootCheck" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Padding="5px"
+                Width="auto" Height="auto" MinWidth="80px" MinHeight="20px" FontSize="12px" IsChecked="False" Click="OnlyToRootCheck_Click">
+                <TextBlock>
+                    Скрыть неявные связи
+                </TextBlock>
+            </CheckBox>
+            <CheckBox x:Name="OnlyClosestRelations" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center" Padding="5px"
+                Width="auto" Height="auto" MinWidth="80px" MinHeight="20px" FontSize="12px" IsChecked="False" Click="OnlyClosestRelations_Click">
+                <TextBlock>
+                    Показать только близкие<LineBreak/>связи
+                </TextBlock>
+            </CheckBox>
+        </Grid>
+    </Grid>
+</Window>
